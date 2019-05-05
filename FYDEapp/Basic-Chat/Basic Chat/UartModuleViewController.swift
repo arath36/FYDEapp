@@ -17,6 +17,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate {
 
     var notificationType: String = "Snapchat\n"
     let dataSource = ["Snapchat\n", "Text Message\n", "Other\n"]
+    let dataSend = ["S\n", "T\n", "O\n"]
     //UI
 
     @IBOutlet weak var scrollView: UIScrollView!
@@ -168,7 +169,7 @@ extension UartModuleViewController: UIPickerViewDataSource, UIPickerViewDelegate
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        notificationType = dataSource[row]
+        notificationType = dataSend[row]
         
         
     }

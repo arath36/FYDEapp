@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-567" y="-3"/>
         </scene>
-        <!--Basic Chat-->
+        <!--FYDE Notification Light-->
         <scene sceneID="ICt-bz-slO">
             <objects>
                 <viewController storyboardIdentifier="BLECentralViewController" automaticallyAdjustsScrollViewInsets="NO" id="s6h-Zo-tC7" customClass="BLECentralViewController" customModule="Basic_Chat" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,7 +84,7 @@
                             <constraint firstAttribute="trailing" secondItem="iJd-RF-aiZ" secondAttribute="trailing" id="vEz-UJ-4BT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Basic Chat" id="w25-yy-fKD">
+                    <navigationItem key="navigationItem" title="FYDE Notification Light" id="w25-yy-fKD">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="wI8-q6-jjP">
                             <connections>
                                 <action selector="refreshAction:" destination="s6h-Zo-tC7" id="0uP-Tx-3ga"/>
