@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3Yh-2X-Wy2">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,7 +14,7 @@
             <objects>
                 <navigationController id="3Yh-2X-Wy2" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eSA-TS-cY5">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -34,18 +34,18 @@
                         <viewControllerLayoutGuide type="bottom" id="cCu-cf-R0b"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M0w-Ty-hJr">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="98" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iJd-RF-aiZ">
-                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlueCell" rowHeight="98" id="LJh-m2-NaE" customClass="PeripheralTableViewCell" customModule="Basic_Chat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="768" height="98"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="98"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LJh-m2-NaE" id="AK0-A7-RVY">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="97.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="97.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RSSI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wW-qX-zLz">
@@ -109,51 +109,35 @@
                         <viewControllerLayoutGuide type="bottom" id="4V9-RU-WM2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Uf4-y2-vXS">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEQ-Id-Qp8">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqA-bO-3LA" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHl-s6-Yg8">
-                                                <rect key="frame" x="349" y="838" width="70" height="64"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="36" id="VHg-xf-Xgl"/>
-                                                    <constraint firstAttribute="height" constant="30" id="yQ0-pS-rop"/>
-                                                </constraints>
-                                                <state key="normal" title="Update"/>
-                                                <connections>
-                                                    <action selector="clickSendAction:" destination="aQA-m6-Bjv" eventType="touchUpInside" id="6Ad-02-jDq"/>
-                                                </connections>
-                                            </button>
-                                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RBZ-qH-QhA">
-                                                <rect key="frame" x="-8" y="96" width="768" height="216"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            </pickerView>
-                                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T8c-XJ-f9s">
-                                                <rect key="frame" x="-8" y="577" width="768" height="216"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            </pickerView>
-                                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Tp-Wo-LJQ">
-                                                <rect key="frame" x="-8" y="300" width="768" height="216"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            </pickerView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.16927744289999999" green="0.16927744289999999" blue="0.16927744289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="jHl-s6-Yg8" firstAttribute="centerX" secondItem="oqA-bO-3LA" secondAttribute="centerX" id="DAv-VA-MD0"/>
-                                            <constraint firstAttribute="bottom" secondItem="jHl-s6-Yg8" secondAttribute="bottom" constant="48" id="iLD-hJ-fhI"/>
-                                            <constraint firstAttribute="trailing" secondItem="jHl-s6-Yg8" secondAttribute="trailing" constant="24" id="vER-Ig-rBv"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsn-xd-Mxj">
+                                        <rect key="frame" x="101" y="442" width="119" height="30"/>
+                                        <state key="normal" title="Send Notification"/>
+                                        <connections>
+                                            <action selector="updateNotification:" destination="aQA-m6-Bjv" eventType="touchUpInside" id="CG5-xZ-se3"/>
+                                        </connections>
+                                    </button>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQV-tr-WcV">
+                                        <rect key="frame" x="0.0" y="176" width="320" height="216"/>
+                                    </pickerView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="oqA-bO-3LA" firstAttribute="top" secondItem="fEQ-Id-Qp8" secondAttribute="top" id="15S-em-WEL"/>
+                                    <constraint firstItem="WQV-tr-WcV" firstAttribute="centerY" secondItem="fEQ-Id-Qp8" secondAttribute="centerY" id="8qt-4x-Mgp"/>
+                                    <constraint firstItem="WQV-tr-WcV" firstAttribute="centerX" secondItem="fEQ-Id-Qp8" secondAttribute="centerX" id="DV6-5N-PxF"/>
                                     <constraint firstAttribute="trailing" secondItem="oqA-bO-3LA" secondAttribute="trailing" id="EmZ-C6-oGx"/>
+                                    <constraint firstItem="vsn-xd-Mxj" firstAttribute="centerX" secondItem="fEQ-Id-Qp8" secondAttribute="centerX" id="Fzw-cz-Q7a"/>
                                     <constraint firstItem="oqA-bO-3LA" firstAttribute="centerY" secondItem="fEQ-Id-Qp8" secondAttribute="centerY" id="Jz0-cH-Sqe"/>
+                                    <constraint firstItem="vsn-xd-Mxj" firstAttribute="top" secondItem="WQV-tr-WcV" secondAttribute="bottom" constant="50" id="RWg-AQ-w3Y"/>
                                     <constraint firstAttribute="bottom" secondItem="oqA-bO-3LA" secondAttribute="bottom" id="Vy4-v5-rdr"/>
                                     <constraint firstItem="oqA-bO-3LA" firstAttribute="centerX" secondItem="fEQ-Id-Qp8" secondAttribute="centerX" id="WKQ-Xc-wuc"/>
                                     <constraint firstItem="oqA-bO-3LA" firstAttribute="leading" secondItem="fEQ-Id-Qp8" secondAttribute="leading" id="alg-aU-zhN"/>
@@ -173,8 +157,8 @@
                         <barButtonItem key="backBarButtonItem" title="Disconnect" id="bh9-F4-hZD"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="pickerView" destination="WQV-tr-WcV" id="fEx-kd-R1O"/>
                         <outlet property="scrollView" destination="fEQ-Id-Qp8" id="FsD-lV-H8p"/>
-                        <outlet property="sendButton" destination="jHl-s6-Yg8" id="Xkr-6a-etz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jX-4e-2bD" userLabel="First Responder" sceneMemberID="firstResponder"/>

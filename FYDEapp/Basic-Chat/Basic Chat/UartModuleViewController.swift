@@ -14,11 +14,13 @@ import UIKit
 import CoreBluetooth
 
 class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate {
-    
+
+    var notificationType: String = "Snapchat\n"
+    let dataSource = ["Snapchat\n", "Text Message\n", "Other\n"]
     //UI
 
-    @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pickerView: UIPickerView!
     
     
     //Data
@@ -28,6 +30,9 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate {
     
     
     override func viewDidLoad() {
+        
+        pickerView.dataSource = self
+        pickerView.delegate = self
         super.viewDidLoad()
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"Back", style:.plain, target:nil, action:nil)
@@ -48,6 +53,19 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate {
         
     }
     
+    
+    
+    @IBAction func updateNotification(_ sender: Any) {
+        
+        writeValue(data: notificationType)
+        
+    }
+    
+    
+    
+    
+    
+    
     func updateIncomingData () {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
             notification in
@@ -63,10 +81,6 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate {
         }
     }
     
-    @IBAction func clickSendAction(_ sender: AnyObject) {
-        outgoingData()
-        
-    }
     
     
     
@@ -135,4 +149,33 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate {
         }
     }
 }
+
+
+
+extension UartModuleViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return dataSource.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return dataSource[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        notificationType = dataSource[row]
+        
+        
+    }
+    
+    
+    
+}
+
+
 
